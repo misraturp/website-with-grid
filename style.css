@@ -1,8 +1,14 @@
+body{
+    margin:0px;
+    font-family:Arial;
+}
+
+
 .zone {
     /*padding:30px 50px;*/
     /*margin:40px 60px;*/
     cursor:pointer;
-    display:inline-block;
+    /*display:inline-block;*/
     color:#FFF;
     font-size:2em;
     /*border-radius:4px;*/
@@ -17,10 +23,24 @@
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
 
+.grey:hover {
+    -webkit-transform:rotate(-7deg);
+    -moz-transform:rotate(-7deg);
+    -o-transform:rotate(-7deg);
+    transform:rotate(-7deg);
+}
+
+
 .container{
     display:flex;
     flex-direction: column;
     /*grid-template-rows: 1fr 5fr 10fr 1fr;*/
+}
+
+.sticky{
+    position:fixed;
+    top:0;
+    width:100%;
 }
 
 .green{
@@ -42,56 +62,34 @@
 
 
 .red{
-    height:500px;    
+    height:50vh;    
     display:flex;
     justify-content: center;
     align-items: center;
 
     background-color: white;
+
 }
 
 .blue{
 
-    display:flex;
-    flex-wrap:wrap;
-
     display:grid;
     grid-gap: 10px;
-    grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
 
 }
 
 .grey{
-    position: relative;
-      flex-basis: calc(33.333% - 10px);
-      margin: 5px;
-      border: 1px solid;
-      box-sizing: border-box;
-
-      display:flex;
-      justify-content: center;
-      align-items: center;
-}
-
-.grey::before {
-  content: '';
-  display: block;
-  padding-top: 100%;
-}
-
-/*.grey{
+    padding:100px;
     margin:20px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}*/
+}
 
 .grey img{
-    width:30%;
+    width:100%;
 }
 
 .red img{
-    width:50%;
+    width:50vmin;
 }
 
 .yellow{
@@ -110,10 +108,8 @@
  *  Green Background
  **********************************************************************/
 .grey{
-    margin:10px;
     background: #444344;
     border: 2px solid grey;
-
 }
 
 
